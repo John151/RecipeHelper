@@ -90,6 +90,7 @@
             this.btnVolumeConvert.TabIndex = 5;
             this.btnVolumeConvert.Text = "Convert to Cups";
             this.btnVolumeConvert.UseVisualStyleBackColor = true;
+            this.btnVolumeConvert.Click += new System.EventHandler(this.btnVolumeConvert_Click);
             // 
             // label3
             // 
