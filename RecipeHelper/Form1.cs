@@ -30,6 +30,7 @@ namespace RecipeHelper
                 //above line not necessary after validation checking, changes data type as well 
                 double farhenheit = (celsius / 5 * 9) + 32;
                 txtFahrenheit.Text = farhenheit.ToString("f2");
+                txtFahrenheit.Focus();
                 }
             else
             {
@@ -46,6 +47,7 @@ namespace RecipeHelper
                 //double mililitres = Convert.ToDouble(txtMililitres.Text);
                 double cups = (mililitres / 263.59);
                 txtCups.Text = cups.ToString("f2");
+                txtCups.Focus();
             }
             else
             {
