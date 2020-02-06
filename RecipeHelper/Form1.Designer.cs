@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtCelsius = new System.Windows.Forms.TextBox();
+            this.txtMililitres = new System.Windows.Forms.TextBox();
+            this.btnTempConvert = new System.Windows.Forms.Button();
+            this.btnVolumeConvert = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtFahrenheit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCups = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,37 +58,38 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mililitres";
             // 
-            // textBox1
+            // txtCelsius
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtCelsius.Location = new System.Drawing.Point(84, 54);
+            this.txtCelsius.Name = "txtCelsius";
+            this.txtCelsius.Size = new System.Drawing.Size(100, 20);
+            this.txtCelsius.TabIndex = 2;
             // 
-            // textBox2
+            // txtMililitres
             // 
-            this.textBox2.Location = new System.Drawing.Point(299, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtMililitres.Location = new System.Drawing.Point(299, 54);
+            this.txtMililitres.Name = "txtMililitres";
+            this.txtMililitres.Size = new System.Drawing.Size(100, 20);
+            this.txtMililitres.TabIndex = 3;
             // 
-            // button1
+            // btnTempConvert
             // 
-            this.button1.Location = new System.Drawing.Point(84, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Convert to Fahrenheit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTempConvert.Location = new System.Drawing.Point(84, 103);
+            this.btnTempConvert.Name = "btnTempConvert";
+            this.btnTempConvert.Size = new System.Drawing.Size(76, 37);
+            this.btnTempConvert.TabIndex = 4;
+            this.btnTempConvert.Text = "Convert to Fahrenheit";
+            this.btnTempConvert.UseVisualStyleBackColor = true;
+            this.btnTempConvert.Click += new System.EventHandler(this.btnTempConvert_Click);
             // 
-            // button2
+            // btnVolumeConvert
             // 
-            this.button2.Location = new System.Drawing.Point(299, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 37);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Convert to Cups";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnVolumeConvert.Location = new System.Drawing.Point(299, 103);
+            this.btnVolumeConvert.Name = "btnVolumeConvert";
+            this.btnVolumeConvert.Size = new System.Drawing.Size(82, 37);
+            this.btnVolumeConvert.TabIndex = 5;
+            this.btnVolumeConvert.Text = "Convert to Cups";
+            this.btnVolumeConvert.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -99,12 +100,13 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Fahrenheit";
             // 
-            // textBox3
+            // txtFahrenheit
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 179);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtFahrenheit.Location = new System.Drawing.Point(84, 179);
+            this.txtFahrenheit.Name = "txtFahrenheit";
+            this.txtFahrenheit.ReadOnly = true;
+            this.txtFahrenheit.Size = new System.Drawing.Size(100, 20);
+            this.txtFahrenheit.TabIndex = 7;
             // 
             // label4
             // 
@@ -115,30 +117,31 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Cups";
             // 
-            // textBox4
+            // txtCups
             // 
-            this.textBox4.Location = new System.Drawing.Point(299, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtCups.Location = new System.Drawing.Point(299, 182);
+            this.txtCups.Name = "txtCups";
+            this.txtCups.ReadOnly = true;
+            this.txtCups.Size = new System.Drawing.Size(100, 20);
+            this.txtCups.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(441, 260);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCups);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtFahrenheit);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnVolumeConvert);
+            this.Controls.Add(this.btnTempConvert);
+            this.Controls.Add(this.txtMililitres);
+            this.Controls.Add(this.txtCelsius);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Recipe Helper";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,14 +151,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtCelsius;
+        private System.Windows.Forms.TextBox txtMililitres;
+        private System.Windows.Forms.Button btnTempConvert;
+        private System.Windows.Forms.Button btnVolumeConvert;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFahrenheit;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCups;
     }
 }
 

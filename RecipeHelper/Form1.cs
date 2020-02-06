@@ -16,5 +16,12 @@ namespace RecipeHelper
         {
             InitializeComponent();
         }
+
+        private void btnTempConvert_Click(object sender, EventArgs e)
+        {
+            double celsius = Convert.ToDouble(txtCelsius.Text);
+            double farhenheit = (celsius / 5 * 9) + 32;
+            txtFahrenheit.Text = farhenheit.ToString("f2");
+        }
     }
 }
